@@ -1,0 +1,32 @@
+<!-- item_helpline.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Helpline text -->
+    <TextView
+        android:id="@+id/textViewHelpline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@id/imageViewCall"
+        android:layout_alignBaseline="@id/imageViewCall"
+        android:layout_alignParentStart="true" />
+
+    <!-- Call icon -->
+    <ImageView
+        android:id="@+id/imageViewCall"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/phone_call"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:contentDescription="Call Icon"
+        android:focusable="true" />
+</RelativeLayout>

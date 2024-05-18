@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0FF">
+
+    <!-- Back Arrow -->
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="app background image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_login_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageViewBackArrow"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back_icon2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="onBackArrowClick"
+        android:contentDescription="Back Arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Time to Get it Verified"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBackArrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:id="@+id/textViewSubHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHead"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Please enter the 6 digit code sent to "
+            android:textSize="15sp"
+            android:gravity="center" />
+
+    <TextView
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSubHead"
+        android:text="+91 0000000000"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:inputType="number"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhoneNumber"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center">
+        
+        <EditText
+            android:id="@+id/inputCode1"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"/>
+
+        <EditText
+            android:id="@+id/inputCode2"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"/>
+
+        <EditText
+            android:id="@+id/inputCode3"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"/>
+
+        <EditText
+            android:id="@+id/inputCode4"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"/>
+
+        <EditText
+            android:id="@+id/inputCode5"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"/>
+
+        <EditText
+            android:id="@+id/inputCode6"
+            android:layout_width="40dp"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="LabelFor"/>
+
+    </LinearLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextOtp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:inputType="number"-->
+<!--        android:digits="0123456789"-->
+<!--        android:maxLength="6"-->
+<!--        android:textColor="@color/black"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout"-->
+<!--        android:layout_marginStart="40dp"-->
+<!--        android:layout_marginEnd="40dp"-->
+<!--        android:gravity="center"/>-->
+
+    <TextView
+        android:id="@+id/textViewResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Didn't receive a code? "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/textViewResendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP"
+        android:textColor="#F44336"
+        android:clickable="true"
+        android:textSize="15sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintStart_toEndOf="@+id/textViewResend"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewResend"
+        android:layout_marginTop="16dp"
+        android:focusable="true" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/VerifyOtpButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Verify OTP"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="36dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#F44336"
+        android:enabled="true"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="36dp"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/textTermsConditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="By continuing, you agree to MindSync"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/VerifyOtpButton" />
+
+
+    <!-- Assuming there's a vertical guideline for centering -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineCenter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- TextView for "Terms of Use" -->
+
+    <!-- TextView for "and" -->
+
+    <TextView
+        android:id="@+id/textViewTermsConditionLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:onClick="onClickViewTerms"
+        android:text="Terms of Use "
+        android:textColor="#F44336"
+        android:textSize="13sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTermsConditions" />
+
+    <TextView
+        android:id="@+id/textViewAnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="and "
+        android:textSize="13sp"
+        android:textColor="@color/black"
+        android:textStyle="bold|normal"
+        app:layout_constraintTop_toBottomOf="@+id/textTermsConditions"
+        app:layout_constraintStart_toEndOf="@+id/textViewTermsConditionLink"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewTermsConditionLink"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView for "Privacy Policy" -->
+    <TextView
+        android:id="@+id/textViewPrivacyPolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="onClickViewPolicy"
+        android:text="Privacy Policy"
+        android:textColor="#F44336"
+        android:textSize="13sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintTop_toBottomOf="@+id/textTermsConditions"
+        app:layout_constraintStart_toEndOf="@+id/textViewAnd"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewTermsConditionLink"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="25sp"
+        android:layout_marginStart="20dp"
+        android:text="UserName"
+        app:flow_horizontalBias="0.45"
+        android:textColor="@color/black" />
+
+    <!-- Horizontal bar below the TextView -->
+    <View
+        android:id="@+id/horizontalBar"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/greetingTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/subHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horizontalBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:text="SELF-CARE"
+        android:textColor="@color/black" />
+
+    <!-- HorizontalScrollView for the list of ImageViews -->
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/subHead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:scrollbars="none">
+
+        <!-- LinearLayout to hold the ImageViews horizontally -->
+        <LinearLayout
+            android:id="@+id/imageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Horizontal bar below the TextView -->
+    <View
+        android:id="@+id/horizontalBar2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="40dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/horizontalScrollView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/recommended"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recommended"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/horizontalBar2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/recommended"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/QuotesHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="serif"
+        android:text="DAILY QUOTES"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/Quotes2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/QuotesHead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_margin="20dp"
+        android:fontFamily="sans-serif"
+        android:text='"Even the darkest night will end and the sun will rise again."'
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/QuotesAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Quotes2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="sans-serif"
+        android:text="VICTOR HUGO"
+        android:textColor="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

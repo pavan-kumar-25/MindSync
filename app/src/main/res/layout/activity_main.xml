@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE0B2">
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_login_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="app background image" />
+
+    <ImageView
+        android:id="@+id/iconImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/app_homepage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHello"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="App Icon" />
+
+    <TextView
+        android:id="@+id/textViewHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to MindSync Counseling!"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewStartJourney"
+        android:layout_marginTop="250dp" />
+
+    <TextView
+        android:id="@+id/textViewStartJourney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's start the journey together"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHello"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.3" />
+
+    <Button
+        android:id="@+id/buttonCreateAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#F44336"
+        android:text="Create account"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStartJourney"
+        app:layout_constraintVertical_bias="0.834" />
+
+    <TextView
+        android:id="@+id/textViewSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Already have an account? "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreateAccount" />
+
+    <TextView
+        android:id="@+id/textViewLinkSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textColor="#F44336"
+        android:clickable="true"
+        android:textSize="15sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCreateAccount"
+        app:layout_constraintStart_toEndOf="@+id/textViewSignIn"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewSignIn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

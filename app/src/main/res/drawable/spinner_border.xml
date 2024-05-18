@@ -1,0 +1,17 @@
+<!-- res/drawable/spinner_border.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="8dp" /> <!-- Adjust the radius value as needed -->
+            <stroke
+                android:color="@android:color/darker_gray"
+                android:width="2dp" />
+            <padding
+                android:top="8dp"
+                android:right="8dp"
+                android:bottom="8dp"
+                android:left="8dp" />
+        </shape>
+    </item>
+</layer-list>

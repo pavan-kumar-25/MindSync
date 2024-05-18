@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0FF">
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_login_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="app background image" />
+
+    <!-- Back Arrow -->
+    <ImageView
+        android:id="@+id/imageViewBackArrow"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back_icon2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="onBackArrowClick"
+        android:contentDescription="Back Arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Building your space..."
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewBackArrow"
+        android:textStyle="bold|normal" />
+
+    <TextView
+        android:id="@+id/textViewSubHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add challenges that you would like help with to your space"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintWidth_max="320dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+        android:layout_marginStart="15dp"
+        android:gravity="center_horizontal"
+        android:layout_marginEnd="15dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChallenges"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSubHead"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.widget.Button
+        android:id="@+id/buttonMaybeLater"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border"
+        android:text="MAYBE LATER"
+        android:textColor="#F44336"
+        android:onClick="onClickSkip"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

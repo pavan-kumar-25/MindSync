@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- chat_message_item.xml -->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/chat_message_background"
+    android:layout_marginStart="100dp"
+    android:layout_marginBottom="16dp"
+    android:layout_gravity="end"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your chat message"
+        android:textSize="17sp"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>
+

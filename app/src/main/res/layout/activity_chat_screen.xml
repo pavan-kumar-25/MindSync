@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_icon2"
+        android:background="@color/white"
+        android:clickable="true"
+        android:onClick="onBackArrowClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:focusable="true" />
+
+    <!-- Counselor Profile Pic -->
+    <ImageView
+        android:id="@+id/counselorProfilePic"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/profile_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Counselor Name -->
+    <TextView
+        android:id="@+id/counselorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dimple Khanna"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/counselorProfilePic"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Options Button (Three vertical dots) -->
+    <ImageButton
+        android:id="@+id/optionsButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/vertical_dots"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Chat Container -->
+    <LinearLayout
+        android:id="@+id/chatContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- RecyclerView for displaying chat messages -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:padding="8dp"/>
+
+        <!-- Input layout for sending messages -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/white"
+            android:padding="8dp">
+
+            <!-- EditText for typing messages -->
+            <EditText
+                android:id="@+id/messageEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext_message"
+                android:hint="Type a message"
+                android:paddingStart="12dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:imeOptions="actionSend"
+                android:inputType="textMultiLine|textCapSentences"
+                android:maxLines="4"/>
+
+
+            <!-- Button to send messages -->
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#eaa734"
+                android:layout_marginStart="10dp"
+                android:text="Send"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

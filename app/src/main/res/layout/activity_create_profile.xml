@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0FF">
+
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_login_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="app background image" />
+
+    <!-- Back Arrow -->
+    <ImageView
+        android:id="@+id/imageViewBackArrow"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/back_icon2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:onClick="onBackArrowClick"
+        android:contentDescription="Back Arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
+
+    <TextView
+        android:id="@+id/textViewHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="here's the fun bit!"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBackArrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/textViewSubHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:text="let's create your profile"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold|normal"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHead" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutFirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSubHead"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="#F44336"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black">
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:hint="First Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="#F44336"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black">
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:hint="Last Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/textInputLayoutGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="#F44336"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextViewGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:hint="Gender"
+            android:inputType="none"
+            android:clickable="true"
+            android:longClickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.MaterialCalendar"
+        android:id="@+id/textInputLayoutDOB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutGender"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:boxStrokeColor="#F44336"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView2DOB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:focusable="false"
+            android:inputType="none"
+            android:clickable="true"
+            android:focusableInTouchMode="false"
+            app:layout_constraintBottom_toTopOf="@+id/buttonNext"
+            android:hint="Date of Birth"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonContinue"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="436dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#F44336"
+        android:text="Continue"
+        android:textColor="@android:color/white"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

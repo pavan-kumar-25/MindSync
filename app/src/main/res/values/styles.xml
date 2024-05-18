@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShapeAppearanceOverlay.FloatingActionButton" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
+    <style name="RoundedAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+</resources>

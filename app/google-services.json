@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1071056459651",
+    "project_id": "mindsync-130e6",
+    "storage_bucket": "mindsync-130e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071056459651:android:46cee6df471f17d56dc8b6",
+        "android_client_info": {
+          "package_name": "com.example.mindsync"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcZxh1ILqIwWfhHn1xwtilyD8itGAEeog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

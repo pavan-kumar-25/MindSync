@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="snackbar_bottom_margin">16dp</dimen>
+    <dimen name="image_width">65dp</dimen>
+    <dimen name="image_height">65dp</dimen>
+    <dimen name="image_margin">20dp</dimen>
+</resources>

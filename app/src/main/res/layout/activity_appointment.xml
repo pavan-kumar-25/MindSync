@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppointmentActivity">
+
+    <TextView
+        android:id="@+id/textViewHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Schedule Appointment"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewTherapistInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHead"/>
+
+    <!-- Text: Choose a Slot -->
+    <TextView
+        android:id="@+id/textViewChooseSlot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Choose a Slot:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTherapistInfo"/>
+
+    <!-- Spinner for Date -->
+    <Spinner
+        android:id="@+id/spinnerDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChooseSlot"/>
+
+    <TextView
+        android:id="@+id/textViewChooseTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_margin="10dp"
+        android:text="Choose Time:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDate"/>
+
+    <!-- Spinner for Time -->
+    <Spinner
+        android:id="@+id/spinnerTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChooseTime"/>
+    <!-- Text: Choose Mode of Communication -->
+    <TextView
+        android:id="@+id/textViewChooseMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Choose Mode of Communication:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTime"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupCommunicationMode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewChooseMode">
+
+        <RadioButton
+            android:id="@+id/radioButtonChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Audio"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Confirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupCommunicationMode"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

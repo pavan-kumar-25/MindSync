@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MindSync</string>
+    <string name="title_activity_account_creation">AccountCreationActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="suicide_helplines">
+        <item>iCall (Mon-Sat: 08:00 - 22:00)</item>
+        <item>9152987821</item>
+        <item>Vandrevala Foundation (24/7)</item>
+        <item>9999666555</item>
+        <item>Prateeksha Kerala (10:00 - 18:00)</item>
+        <item>4842448830</item>
+        <!-- Add more helplines as needed -->
+    </string-array>
+
+    <string-array name="domestic_abuse_helplines">
+        <item>Sneha (24/7)</item>
+        <item>9833052493</item>
+        <item>Special Cell (24/7)</item>
+        <item>1091</item>
+        <!-- Add more helplines as needed -->
+    </string-array>
+
+    <string-array name="child_helplines">
+        <item>Childline India Foundation (24/7)</item>
+        <item>1098</item>
+        <!-- Add more helplines as needed -->
+    </string-array>
+
+    <string name="faq_question_1"><b>Q: How can counseling help me?</b><br/>A: Counseling provides a supportive environment to explore your thoughts, feelings, and concerns. It can help you develop coping strategies and gain new perspectives on your challenges.</string>
+    <string name="faq_question_2"><b>Q: What types of issues can I discuss in counseling?</b><br/>A: You can discuss a wide range of issues in counseling, including stress, anxiety, depression, relationships, self-esteem, and more.</string>
+    <string name="faq_question_3"><b>Q: Is counseling confidential?</b><br/>A: Yes, counseling sessions are confidential. Your privacy is important, and information shared during counseling is kept confidential except in certain legal situations.</string>
+    <string name="faq_question_4"><b>Q: How long does counseling last?</b><br/>A: The duration of counseling varies depending on your needs and goals. Some people find relief in just a few sessions, while others may benefit from longer-term therapy.</string>
+    <string name="faq_question_5"><b>Q: What should I expect from my first counseling session?</b><br/>A: Your first counseling session is an opportunity to discuss your concerns, goals, and what you hope to achieve through counseling. Your counselor will listen to you without judgment and work with you to create a personalized treatment plan.</string>
+
+
+
+</resources>

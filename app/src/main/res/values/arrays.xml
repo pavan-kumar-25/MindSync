@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="countries">
+        <item>I am in India</item>
+        <item>I am in Japan</item>
+        <!-- Add more countries as needed -->
+    </string-array>
+</resources>

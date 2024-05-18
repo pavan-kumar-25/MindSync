@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- RecyclerView to display appointment details -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- TextView to display when there are no appointments -->
+
+    <ImageView
+        android:id="@+id/noAppointmentsImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_nosessions"
+        android:layout_centerInParent="true"
+        android:layout_above="@+id/noAppointmentsTextView"/>
+
+    <TextView
+        android:id="@+id/noAppointmentsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Upcoming Therapy Sessions"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+</RelativeLayout>

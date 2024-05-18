@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Required permission for internet access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MindSync"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".AccountCreationActivity" />
+        <activity android:name=".AccountLoginActivity" />
+        <activity android:name=".AccountForgotPasswordEmail"/>
+        <activity android:name=".AccountForgotPasswordPhone"/>
+        <activity android:name=".AccountCreateEmailPassActivity"/>
+        <activity android:name=".OtpVerificationActivity"/>
+        <activity android:name=".CategoryTypesActivity"/>
+        <activity android:name=".UserDashboardActivity"/>
+        <activity android:name=".ChatScreenActivity"/>
+        <activity android:name=".ProfileActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".SoSActivity"/>
+        <activity android:name=".InternationalCrisisHelplineActivity"/>
+        <activity android:name=".InternationalChildHelplineActivity"/>
+        <activity android:name=".AccountCreateProfileCreation"/>
+        <activity android:name=".UploadProfilePicActivity"/>
+        <activity android:name=".GeminiChatBotActivity"/>
+        <activity android:name=".AppointmentActivity"/>
+        <activity android:name=".NotificationActivity"/>
+        <activity android:name=".ContactFaqActivity"/>
+
+    </application>
+
+</manifest>

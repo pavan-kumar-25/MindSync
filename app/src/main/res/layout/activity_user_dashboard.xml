@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF0FF">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Hamburger Icon -->
+    <ImageView
+        android:id="@+id/imageViewHamburger"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/hamburger_icon"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="15dp"
+        android:contentDescription="Hamburger Icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true" />
+
+    <ImageView
+        android:id="@+id/imageViewChat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:clickable="true"
+        android:contentDescription="Chat Icon"
+        android:onClick="onChatClick"
+        android:src="@drawable/chat_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewNotification"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/notification_bell"
+        android:contentDescription="Notification Icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewChat"
+        android:clickable="true"
+        android:onClick="onNotificationClick" />
+
+    <!-- SOS Button -->
+    <Button
+        android:id="@+id/buttonSOS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SOS"
+        android:layout_margin="16dp"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF"
+        android:contentDescription="SOS Button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/imageViewNotification"
+        android:clickable="true"
+        android:onClick="onSOSClick"
+        android:focusable="true" />
+
+    <!-- Scrollable Content Area -->
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollViewContent"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonSOS"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent">-->
+
+<!--        &lt;!&ndash; ViewFlipper for dynamic content switching &ndash;&gt;-->
+<!--        <ViewFlipper-->
+<!--            android:id="@+id/viewFlipper"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            &lt;!&ndash; Page 1: Default content &ndash;&gt;-->
+<!--            <include layout="@layout/activity_homepage" />-->
+
+<!--            &lt;!&ndash; Page 2: Therapist content &ndash;&gt;-->
+<!--            <include layout="@layout/activity_therapists" />-->
+
+<!--            &lt;!&ndash; Page 3: Bookings content &ndash;&gt;-->
+<!--            <include layout="@layout/activity_therapy_bookings" />-->
+
+<!--            &lt;!&ndash; Page 4: Reports content &ndash;&gt;-->
+<!--            <include layout="@layout/activity_therapy_reports" />-->
+
+<!--        </ViewFlipper>-->
+
+
+<!--    </ScrollView>-->
+
+    <!-- FrameLayout for dynamic content switching -->
+    <FrameLayout
+        android:id="@+id/frameLayoutContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonSOS"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </FrameLayout>
+
+    <!-- FloatingActionButton -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chatBot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/chat_bot"
+        app:rippleColor="@color/white"
+        app:backgroundTint="@color/white"
+        app:tint="@null"
+        app:fabCustomSize="60dp"
+        app:maxImageSize="38dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.FloatingActionButton"
+        android:contentDescription="Chat Icon"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#2CD66440"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Home -->
+    <LinearLayout
+        android:id="@+id/layoutHome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/homepage_icon"
+            android:contentDescription="Home Icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+
+            android:textColor="#F44336" />
+    </LinearLayout>
+
+        <!-- Therapist -->
+        <LinearLayout
+            android:id="@+id/layoutTherapist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/imageViewTherapist"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/therapist_icon"
+                android:contentDescription="Therapist Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Therapist"
+                android:textColor="#F44336" />
+        </LinearLayout>
+
+        <!-- Self Care -->
+        <LinearLayout
+            android:id="@+id/layoutMyBookings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/selfcare_icon"
+                android:contentDescription="Self Care Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Bookings"
+                android:textColor="#F44336" />
+        </LinearLayout>
+
+        <!-- Journal -->
+        <LinearLayout
+            android:id="@+id/layoutReports"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/journalbook_icon"
+                android:contentDescription="Journal Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reports"
+                android:textColor="#F44336" />
+        </LinearLayout>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <RelativeLayout
+        android:id="@+id/drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#FFFFFF">
+
+<!--        &lt;!&ndash; Profile Icon on Top Right &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/imageViewProfile"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:src="@drawable/profile_icon"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:contentDescription="Profile Icon"/>-->
+
+        <!-- Icon on the Right Side -->
+        <!--            android:layout_alignTop="@id/imageViewProfile"-->
+        <ImageView
+            android:id="@+id/imageViewRightIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logout_icon"
+            android:layout_marginTop="15dp"
+            android:onClick="onClickLoginPage"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Right Icon"/>
+
+
+        <!-- Profile Text -->
+        <!--            android:layout_below="@id/imageViewProfile"-->
+        <TextView
+            android:id="@+id/textViewProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_below="@id/imageViewRightIcon"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:onClick="onProfileClick"
+            android:drawablePadding="10dp"
+            app:drawableSize="10dp"
+            android:contentDescription="Profile Text"
+            app:drawableStartCompat="@drawable/user" />
+
+        <!-- Horizontal Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@id/textViewProfile"
+            android:background="#000000"/>
+
+        <!-- Settings Text -->
+        <TextView
+            android:id="@+id/textViewSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_below="@id/textViewProfile"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:drawablePadding="10dp"
+            android:onClick="onSettingsClick"
+            app:drawableSize="10dp"
+            android:contentDescription="Settings Text"
+            app:drawableStartCompat="@drawable/settings_icon"
+            android:focusable="true" />
+
+        <!-- Horizontal Line for Settings -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@id/textViewSettings"
+            android:background="#000000"/>
+
+        <!-- Contact & FAQ Text -->
+        <TextView
+            android:id="@+id/textViewContactFAQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact &amp; FAQ"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_below="@id/textViewSettings"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:drawablePadding="10dp"
+            app:drawableSize="10dp"
+            android:contentDescription="Contact &amp; FAQ Text"
+            app:drawableStartCompat="@drawable/faq_icon"
+            android:focusable="true" />
+
+        <!-- Horizontal Line for Contact & FAQ -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@id/textViewContactFAQ"
+            android:background="#000000"/>
+
+        <!-- Drawer content goes here -->
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

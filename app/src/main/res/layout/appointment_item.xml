@@ -1,0 +1,90 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@android:color/white">
+
+    <!-- Define layout for each appointment item -->
+    <!-- Modify as per your appointment details -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/therapistNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Therapist Name"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/therapistDesignationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Therapist Designation"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/communicationModeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Communication Mode"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <!-- Horizontal LinearLayout to place buttons in the same line -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/cancelAppointmentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel Appointment"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/startSessionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Start Session"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorAccent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

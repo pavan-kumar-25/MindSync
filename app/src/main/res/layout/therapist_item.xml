@@ -1,0 +1,93 @@
+<!-- therapist_item.xml -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Left side: therapist image -->
+        <ImageView
+            android:id="@+id/imageViewTherapist"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/circular_border"
+            android:src="@drawable/profile_dp"
+            android:scaleType="centerCrop"/>
+
+        <!-- Right side: therapist details -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Therapist Name"
+                android:textSize="16sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/textViewDesignation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Therapist Designation"
+                android:textSize="14sp"
+                android:textColor="@color/gray"/>
+
+            <!-- Horizontal layout for RatingBar and sessions text -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="top"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp">
+
+                <!-- RatingBar with smaller size -->
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:rating="4.5"
+                    android:numStars="5"
+                    android:stepSize="0.5"
+                    android:isIndicator="true"
+                    android:progressTint="@color/orange"/>
+
+                <!-- Number of sessions conducted -->
+                <TextView
+                    android:id="@+id/textViewSessions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(0 Sessions)"
+                    android:textSize="12sp"
+                    android:textColor="@color/gray"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button"
+                android:backgroundTint="#F44336"
+                app:icon="@drawable/chat_bubble"
+                app:iconGravity="textStart"
+                android:text="Talk"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
